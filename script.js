@@ -11,10 +11,7 @@ for (var i = 0; i < navLinks.length; i++) {
 
     var interval = setInterval(function () {
       var sectionPos = sectionElement.getBoundingClientRect();
-      if (
-        sectionPos.y <= 0 ||
-        window.innerHeight - sectionPos.y + 0.375 == sectionElement.offsetHeight
-      ) {
+      if (sectionPos.y <= 0) {
         clearInterval(interval);
         return;
       } else {
